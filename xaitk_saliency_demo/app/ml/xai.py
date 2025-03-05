@@ -11,6 +11,7 @@ import torch
 
 from xaitk_saliency.impls.gen_image_similarity_blackbox_sal.sbsm import SBSMStack
 from xaitk_saliency.impls.gen_image_classifier_blackbox_sal.rise import RISEStack
+from xaitk_saliency.impls.gen_image_classifier_blackbox_sal.mc_rise import MCRISEStack
 from xaitk_saliency.impls.gen_image_classifier_blackbox_sal.slidingwindow import (
     SlidingWindowStack,
 )
@@ -50,6 +51,11 @@ SALIENCY_TYPES = {
     "SlidingWindowStack": {
         "_saliency": {
             "class": SlidingWindowStack,
+        },
+    },
+    "MCRISEStack": {
+        "_saliency": {
+            "class": MCRISEStack,
         },
     },
     # Similarity
